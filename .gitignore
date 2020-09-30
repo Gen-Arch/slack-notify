@@ -12,3 +12,6 @@ cdk.out
 
 env.sh
 cdk.json
+/vendor/
+.envrc
+/.bundle/
