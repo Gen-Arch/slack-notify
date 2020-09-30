@@ -24,10 +24,10 @@ end
 def notify(type, alram, opts = { color: :red })
   url          = hook(type)
 
-  attachs           = Hash.new
-  attachs[:title]   = alram
-  attachs[:text] = "```#{opts[:text]}```" if opts[:text]
-  attachs[:color]   = colors[opts[:color]]
+  attachs         = Hash.new
+  attachs[:title] = alram
+  attachs[:text]  = "```#{opts[:text]}```" if opts[:text]
+  attachs[:color] = colors[opts[:color]]
 
   slack          = Slack::Incoming::Webhooks.new url
   slack.channel  = "#bot-test"
