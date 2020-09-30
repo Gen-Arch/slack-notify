@@ -1,9 +1,5 @@
 import * as Slack from 'typed-slack'
 
-const disaster = new Slack.IncomingWebhook(process.env.WEBHOOK_DISASTER)
-const alart    = new Slack.IncomingWebhook(process.env.WEBHOOK_ALART)
-const error    = new Slack.IncomingWebhook(process.env.WEBHOOK_ERROR)
-
 const handler = async function (event: any, context: any) {
   console.log(event)
   console.log(context)

@@ -1,11 +1,11 @@
 import { expect as expectCDK, matchTemplate, MatchStyle } from '@aws-cdk/assert';
 import * as cdk from '@aws-cdk/core';
-import * as SlackNoitice from '../lib/slack-noitice-stack';
+import * as SlackNoitice from '../lib/slack-notify-stack';
 
 test('Empty Stack', () => {
     const app = new cdk.App();
     // WHEN
-    const stack = new SlackNoitice.SlackNoiticeStack(app, 'MyTestStack');
+    const stack = new SlackNotify.SlackNotifyStack(app, 'MyTestStack');
     // THEN
     expectCDK(stack).to(matchTemplate({
       "Resources": {}
