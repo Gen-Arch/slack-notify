@@ -15,10 +15,10 @@ export class SlackNotifyStack extends cdk.Stack {
       handler:  'slack-notify.handler',
       timeout:  cdk.Duration.seconds(60),
       environment: {
-        WEBHOOK_DISASTER: disaster,
-        WEBHOOK_ALART:    alart,
-        WEBHOOK_ERROR:    error,
-        WEBHOOK_WARNIG:   warning
+        WEBHOOK_DISASTER: this.node.tryGetContext("notify-disaster"),
+        WEBHOOK_ALART:    this.node.tryGetContext("notify-alart"),
+        WEBHOOK_ERROR:    this.node.tryGetContext("notify-error"),
+        WEBHOOK_WARNIG:   this.node.tryGetContext("notify-warning"),
       }
     });
 
