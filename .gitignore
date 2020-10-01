@@ -11,3 +11,7 @@ cdk.out
 .parcel-cache
 
 env.sh
+cdk.json
+/vendor/
+.envrc
+/.bundle/
