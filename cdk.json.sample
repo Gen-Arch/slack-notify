@@ -5,10 +5,11 @@
     "aws-cdk:enableDiffNoFail": "true",
     "@aws-cdk/core:stackRelativeExports": "true",
     "hooks": {
-      "disaster" : "<hook url>",
-      "alart"    : "<hook url>",
-      "errro"    : "<hook url>",
-      "warning"  : "<hook url>"
+      "emerg" : "<hook url>",
+      "alart" : "<hook url>",
+      "crit"  : "<hook url>",
+      "err"   : "<hook url>",
+      "warn"  : "<hook url>"
     }
   }
 }
