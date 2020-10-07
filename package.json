@@ -28,6 +28,7 @@
     "@aws-cdk/aws-sns": "^1.64.1",
     "@aws-cdk/core": "1.64.1",
     "@types/request-promise": "^4.1.46",
+    "cdk-assume-role-credential-plugin": "^1.1.1",
     "source-map-support": "^0.5.16",
     "typed-slack": "^0.1.4"
   }
