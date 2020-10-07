@@ -8,7 +8,6 @@ export class SlackNotifyStack extends cdk.Stack {
     super(scope, id, props);
 
     const hooks = this.node.tryGetContext("hooks")
-
     const topic = new sns.Topic(this, "slack-notify-topic")
 
     const lmd = new lambda.Function(this, 'slack-notify-lamda', {
@@ -17,10 +16,12 @@ export class SlackNotifyStack extends cdk.Stack {
       handler:  'slack-notify.handler',
       timeout:  cdk.Duration.seconds(60),
       environment: {
-        WEBHOOK_DISASTER: hooks["disaster"],
-        WEBHOOK_ALART:    hooks["alart"],
-        WEBHOOK_ERROR:    hooks["error"],
-        WEBHOOK_WARNIG:   hooks["warning"],
+        WEBHOOK_EMERG: hooks["emerg"],
+        WEBHOOK_ALART: hooks["alart"],
+        WEBHOOK_CRIT:  hooks["crit"],
+        WEBHOOK_ERR:   hooks["err"],
+        WEBHOOK_WARN:  hooks["warn"],
+        TZ:            "Asia/Tokyo"
       }
     });
 

@@ -1,12 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    colorable (0.2.1)
     slack-incoming-webhooks (0.3.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  colorable
   slack-incoming-webhooks
 
 BUNDLED WITH
